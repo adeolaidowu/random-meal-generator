@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css?family=Baloo+Da+2|Ubuntu:300&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: 'Ubuntu', sans-serif;
+  font-size: $font-size-large;
+  background: oldlace;
+  color: #000;
+  max-width: 100vw;
+}
+
+h1,h2,h3,h4,h5,h6 {
+  font-family: 'Baloo Da 2', cursive;
+}
+
+.button {
+  padding: 10px 20px;
+  background: seagreen;
+  color: oldlace;
+  border: none;
+  border-radius: 20px;
+  transition: all .2s ease-in;
+
+  &:hover {
+    cursor: pointer;
+    background: mediumseagreen;
+  }
+  &:focus {
+    outline: none;
+  }
+
+  &:active {
+    transform: scale(0.95);
+  }
+}

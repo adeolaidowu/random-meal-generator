@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Header from './components/Header';
 import Meal from './components/Meal';
-import './App.css';
+import Footer from './components/Footer';
 
 class App extends Component {
   state = {
@@ -21,6 +21,7 @@ getRandomMeal = (e) => {
       <div>
       <Header getRandomMeal={this.getRandomMeal} />
       {this.state.meal.length > 0 && <Meal meal={this.state.meal[0]} />}
+      {this.state.meal.length > 0 && <Footer />}
       </div>
       );
   }
