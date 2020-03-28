@@ -1,5 +1,6 @@
 import React from 'react'
 import MealVideo from './MealVideo';
+import ScrollAnimation from 'react-animate-on-scroll';
 
 const Meal = ({ meal }) => {
   let ingredients = [];
@@ -11,7 +12,8 @@ const Meal = ({ meal }) => {
     }
   }
 return (
-  <div className="wrapper">
+  <ScrollAnimation animateIn='fadeIn' animateOut='fadeOut'>
+    <div className="wrapper">
     <div className="meal-container">
       <div className="meal__info">
         <h3>{meal.strMeal}:</h3>
@@ -33,7 +35,8 @@ return (
         {meal.strYoutube && <MealVideo videoLink = {meal.strYoutube} title={meal.strMeal} />}
       </div>
     </div>
-  </div>
+    </div>
+  </ScrollAnimation>
 );
 }
 
